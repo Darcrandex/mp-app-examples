@@ -24,12 +24,3 @@
 .ui-shadow-2xl {
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.17);
 }
-
-@font-face {
-  font-family: 'Iconoplastic';
-  src: url('assets/fonts/iconoplastic.ttf');
-}
-
-.ui-font-iconoplastic {
-  font-family: 'Iconoplastic';
-}

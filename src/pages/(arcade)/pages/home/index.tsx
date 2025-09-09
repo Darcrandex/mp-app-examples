@@ -64,7 +64,7 @@ export default function Home() {
         id='header'
         className={cls(
           'fixed top-0 right-0 left-0 z-50 duration-500',
-          showHeaderBg ? 'bg-emerald-300' : 'bg-transparent',
+          showHeaderBg ? 'bg-green-300' : 'bg-transparent',
         )}
         style={{ paddingTop: top }}
       >
@@ -128,15 +128,15 @@ export default function Home() {
 
           <ol className='mt-8 grid grid-cols-3 gap-4'>
             <li className='text-center'>
-              <p className='ui-font-iconoplastic text-2xl font-bold text-gray-800'>1256</p>
+              <p className='text-2xl font-bold text-gray-800'>1256</p>
               <p className='text-gray-500'>游戏币</p>
             </li>
             <li className='text-center'>
-              <p className='ui-font-iconoplastic text-2xl font-bold text-gray-800'>56</p>
+              <p className='text-2xl font-bold text-gray-800'>56</p>
               <p className='text-gray-500'>彩票</p>
             </li>
             <li className='text-center'>
-              <p className='ui-font-iconoplastic text-2xl font-bold text-gray-800'>145</p>
+              <p className='text-2xl font-bold text-gray-800'>145</p>
               <p className='text-gray-500'>积分</p>
             </li>
           </ol>

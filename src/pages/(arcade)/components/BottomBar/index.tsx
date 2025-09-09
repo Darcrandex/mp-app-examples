@@ -12,7 +12,7 @@ import Taro, { useRouter } from '@tarojs/taro'
 import { useCallback } from 'react'
 import './styles.less'
 
-import imgTabsBg from 'src/pages/(arcade)/assets/images/tabs-top-bg.png'; // 836*70
+import imgTabsBg from 'src/pages/(arcade)/assets/images/tabs-top-bg.png' // 836*70
 
 const tabs = [
   { name: '首页', path: '/pages/(arcade)/pages/home/index', icon: 'icon-home', activeIcon: 'icon-home-fill' },
