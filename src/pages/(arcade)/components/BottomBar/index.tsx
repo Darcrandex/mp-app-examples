@@ -60,7 +60,7 @@ export default function BottomBar() {
                 className='flex h-16 w-16 flex-col items-center justify-center rounded-full bg-green-300'
                 onClick={() => Taro.navigateTo({ url: item.path })}
               >
-                <IconFont name={item.icon} className='text-3xl text-gray-800' />
+                <IconFont name={item.icon} className='text-4xl text-gray-800' />
               </div>
             ) : (
               <div
@@ -75,7 +75,7 @@ export default function BottomBar() {
           )}
         </div>
 
-        <div className='' style={{ height: bottom }}></div>
+        <div className='' style={{ height: bottom || 10 }}></div>
       </footer>
 
       <div style={{ height: bottomRect.height }}></div>
