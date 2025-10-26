@@ -3,7 +3,7 @@
   "cloudfunctionRoot": "cloudfunctions/",
   "projectname": "taro-react-demo",
   "description": "taro react ts 项目模板",
-  "appid": "wx29d6ff66f16f584f",
+  "appid": "",
   "setting": {
     "urlCheck": false,
     "es6": true,

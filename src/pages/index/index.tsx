@@ -25,10 +25,13 @@ export default function Index() {
 
       <p className='m-4 indent-8 text-gray-600'>
         本项目将展示多个微信小程序项目，每个项目独立展示 UI 和功能模块，涉及的数据则使用 mock 实现。本项目仅用于展示
-        微信小程序的一些常用功能，不涉及真实的业务逻辑。
+        微信小程序的一些常用功能，不会获取或使用用户的个人信息。
       </p>
 
-      <ol className='m-4 mt-12 space-y-4'>
+      <h2 className='m-4 font-bold'>项目列表</h2>
+      <p className='m-4 text-gray-600'>提示:进入任意项目后, 若需要返回至项目列表, 需重新打开小程序</p>
+
+      <ol className='m-4 mt-8 space-y-4'>
         {list.map((v) => (
           <li key={v.name} onClick={() => Taro.navigateTo({ url: v.pagePath })}>
             <div className='flex gap-4'>

@@ -1,15 +1,7 @@
-/**
- * @name QueryProvider
- * @description
- * @author darcrand
- */
+// 注意: 由于 @tanstack/react-query@5 无法在微信小程序中使用, 因此本项目仅使用 @tanstack/react-query@4
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { AbortController, abortableFetch } from 'abortcontroller-polyfill/dist/cjs-ponyfill'
 import { PropsWithChildren } from 'react'
-
-globalThis.AbortController = AbortController
-globalThis.fetch = abortableFetch
 
 const queryClient = new QueryClient({
   defaultOptions: {

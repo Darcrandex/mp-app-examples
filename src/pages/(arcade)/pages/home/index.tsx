@@ -12,8 +12,9 @@ import { cls } from '@/utils/cls'
 import { Image } from '@taroify/core'
 import { usePageScroll } from '@tarojs/taro'
 import { useThrottleFn } from 'ahooks'
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 
+import { useQuery } from '@tanstack/react-query'
 import imgHomeBanner from 'src/pages/(arcade)/assets/images/home-banner.jpg'
 import iconCoin2 from 'src/pages/(arcade)/assets/images/icon-coin-02.png'
 import iconCoin from 'src/pages/(arcade)/assets/images/icon-coin.png'
@@ -48,15 +49,18 @@ export default function Home() {
 
   const [currentType, setCurrentType] = useState(types[0].value)
 
-  const list = useMemo(() => {
-    if (currentType === '1') {
-      return gameCoins
-    }
-    if (currentType === '2') {
-      return lotteries
-    }
-    return []
-  }, [currentType])
+  const { data: list = [] } = useQuery({
+    queryKey: ['home', 'list', currentType],
+    queryFn: () => {
+      if (currentType === '1') {
+        return gameCoins
+      }
+      if (currentType === '2') {
+        return lotteries
+      }
+      return []
+    },
+  })
 
   return (
     <>
