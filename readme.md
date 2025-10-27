@@ -5,3 +5,4 @@
 ## 项目列表
 
 - [电玩城](https://www.zcool.com.cn/work/ZNzE2NzM4NjQ=.html)
+- [鸡尾酒项目](https://www.zcool.com.cn/work/ZMzgyMDgyMjA=.html)

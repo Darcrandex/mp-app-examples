@@ -16,6 +16,13 @@ const list = [
     desc: '一款线上购游戏币和兑换套票的小程序',
     pagePath: '/pages/(arcade)/pages/home/index',
   },
+
+  {
+    cover: img1,
+    name: '世纪鸡尾酒',
+    desc: '一款线上购鸡尾酒的小程序',
+    pagePath: '/pages/(cocktail)/pages/home/index',
+  },
 ]
 
 export default function Index() {
@@ -45,7 +52,7 @@ export default function Index() {
 
               <article>
                 <h3 className='text-lg font-bold'>{v.name}</h3>
-                <p className='text-gray-600'>{v.desc}</p>
+                <p className='mt-2 text-gray-600'>{v.desc}</p>
               </article>
             </div>
           </li>
