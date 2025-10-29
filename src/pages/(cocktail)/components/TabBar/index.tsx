@@ -8,7 +8,6 @@ import './styles.css'
 
 const tabs = [
   { name: '经典', path: '/pages/(cocktail)/pages/home/index', icon: 'icon-home' },
-  { name: '分类', path: '/pages/(cocktail)/pages/category/index', icon: 'icon-all' },
   { name: '我的', path: '/pages/(cocktail)/pages/mine/index', icon: 'icon-customer' },
 ]
 

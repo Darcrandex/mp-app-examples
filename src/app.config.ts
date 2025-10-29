@@ -24,7 +24,7 @@ export default defineAppConfig({
     // 鸡尾酒项目
     {
       root: 'pages/(cocktail)',
-      pages: ['pages/home/index', 'pages/category/index', 'pages/mine/index', 'pages/item-detail/index'],
+      pages: ['pages/home/index', 'pages/mine/index', 'pages/item-detail/index'],
     },
   ],
 
