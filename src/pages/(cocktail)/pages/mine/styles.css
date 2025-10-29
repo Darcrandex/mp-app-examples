@@ -1,0 +1,8 @@
+.ui-mine-bg {
+  width: 100vw;
+
+  background:
+    radial-gradient(circle at 4% 6%, transparent 0%, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    radial-gradient(circle at 4% 6%, transparent 0%, rgba(255, 255, 255, 0.2) 36%, transparent 36%),
+    linear-gradient(120deg, #fc6c53, #f7ead1);
+}

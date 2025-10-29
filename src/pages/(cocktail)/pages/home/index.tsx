@@ -1,8 +1,10 @@
+import IconFont from '@/components/IconFont'
 import { useSafeArea } from '@/hooks/useSafeArea'
 import TabBar from '@/pages/(cocktail)/components/TabBar'
 import { rankList, recommendList } from '@/pages/(cocktail)/mock/data'
 import { useQuery } from '@tanstack/react-query'
 import { ScrollView, Image as TaroImage } from '@tarojs/components'
+import Taro from '@tarojs/taro'
 import './styles.css'
 
 export default function Home() {
@@ -30,9 +32,9 @@ export default function Home() {
       <h1 className='mx-6 text-3xl font-extrabold tracking-wider'>Cocktail World</h1>
       <p className='mx-6 mt-2 text-sm text-gray-800'>在鸡尾酒时间找到适合你的</p>
 
-      <div className='m-6'>
+      <div className='m-6' onClick={() => Taro.navigateTo({ url: '/pages/(cocktail)/pages/item-detail/index?id=1' })}>
         <TaroImage
-          src='https://pic1.zhimg.com/v2-5c0536557ce110a012f78c37b2b05138_r.jpg'
+          src='https://c-ssl.duitang.com/uploads/blog/202311/03/2YSalpzpf68pOMA.jpeg'
           mode='scaleToFill'
           className='h-xl w-full rounded-2xl object-cover'
         />
@@ -49,6 +51,7 @@ export default function Home() {
                 key={item.id}
                 className='rounded-lg px-4 py-2 text-center text-white'
                 style={{ backgroundColor: item.color }}
+                onClick={() => Taro.navigateTo({ url: `/pages/(cocktail)/pages/item-detail/index?id=${item.id}` })}
               >
                 <p className='text-xs whitespace-nowrap'>{item.subName}</p>
                 <p className='whitespace-nowrap'>{item.name}</p>
@@ -63,7 +66,11 @@ export default function Home() {
 
       <ul className='mx-6 mt-10 mb-6 space-y-12'>
         {list.map((item) => (
-          <li key={item.id} className='ui-item-container flex gap-4 rounded-2xl bg-white p-4'>
+          <li
+            key={item.id}
+            className='ui-item-container flex gap-4 rounded-2xl bg-white p-4'
+            onClick={() => Taro.navigateTo({ url: `/pages/(cocktail)/pages/item-detail/index?id=${item.id}` })}
+          >
             <div className='relative w-1/2'>
               <TaroImage
                 src={item.cover}
@@ -86,9 +93,11 @@ export default function Home() {
 
               <footer className='flex gap-4'>
                 <p className='flex items-center gap-1'>
+                  <IconFont name='icon-time-fill' />
                   <span className='text-xs font-bold text-gray-800'>{item.time}</span>
                 </p>
                 <p className='flex items-center gap-1'>
+                  <IconFont name='icon-favorites-fill' className='text-orange-400' />
                   <span className='text-xs font-bold text-gray-800'>{item.stars}</span>
                 </p>
               </footer>
