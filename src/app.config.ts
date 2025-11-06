@@ -30,7 +30,7 @@ export default defineAppConfig({
     // 奶茶项目
     {
       root: 'pages/(milk-tea)',
-      pages: ['pages/home/index'],
+      pages: ['pages/home/index', 'pages/category/index', 'pages/cart/index', 'pages/mine/index'],
     },
   ],
 

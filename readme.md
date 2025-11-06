@@ -26,3 +26,7 @@
 ```tsx
 import '@taroify/core/dialog/style'
 ```
+
+### react-query 版本问题
+
+由于小程序无法使用最新版本的 react-query@5.x, 所以需要使用 4.x 版本.
