@@ -4,6 +4,7 @@ import { PropsWithChildren } from 'react'
 import '@/assets/iconfont/iconfont.css'
 import QueryProvider from '@/components/QueryProvider'
 import Taro from '@tarojs/taro'
+
 import './app.css'
 
 function App({ children }: PropsWithChildren<any>) {

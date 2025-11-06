@@ -26,6 +26,12 @@ export default defineAppConfig({
       root: 'pages/(cocktail)',
       pages: ['pages/home/index', 'pages/mine/index', 'pages/item-detail/index'],
     },
+
+    // 奶茶项目
+    {
+      root: 'pages/(milk-tea)',
+      pages: ['pages/home/index'],
+    },
   ],
 
   window: {

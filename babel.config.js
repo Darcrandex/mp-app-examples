@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // babel-preset-taro 更多选项和默认值：
 // https://docs.taro.zone/docs/next/babel-config
 module.exports = {
@@ -29,10 +30,7 @@ module.exports = {
         libraryDirectory: '',
         camel2DashComponentName: false,
         style: () => '@taroify/icons/index.css',
-        customName: (name) =>
-          name === 'Icon'
-            ? '@taroify/icons/van/VanIcon'
-            : `@taroify/icons/${name}`,
+        customName: (name) => (name === 'Icon' ? '@taroify/icons/van/VanIcon' : `@taroify/icons/${name}`),
       },
       '@taroify/icons',
     ],

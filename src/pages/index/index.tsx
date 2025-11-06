@@ -23,6 +23,13 @@ const list = [
     desc: '一款线上购鸡尾酒的小程序',
     pagePath: '/pages/(cocktail)/pages/home/index',
   },
+
+  {
+    cover: img1,
+    name: '夏日么么茶',
+    desc: '一款线上购奶茶的小程序',
+    pagePath: '/pages/(milk-tea)/pages/home/index',
+  },
 ]
 
 export default function Index() {

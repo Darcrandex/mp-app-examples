@@ -33,6 +33,7 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
       // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
       enable: false,
     },
+
     mini: {
       postcss: {
         pxtransform: {
@@ -78,6 +79,9 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
     h5: {
       publicPath: '/',
       staticDirectory: 'static',
+
+      esnextModules: ['@taroify'],
+
       output: {
         filename: 'js/[name].[hash:8].js',
         chunkFilename: 'js/[name].[chunkhash:8].js',
@@ -104,6 +108,7 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
         chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
       },
     },
+
     rn: {
       appName: 'taroDemo',
       postcss: {
