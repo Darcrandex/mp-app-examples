@@ -3,7 +3,7 @@ import { useElementRect } from '@/hooks/useElementRect'
 import { useSafeArea } from '@/hooks/useSafeArea'
 import { cls } from '@/utils/cls'
 import Taro, { useRouter } from '@tarojs/taro'
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 import './styles.css'
 
 const tabs = [
@@ -30,8 +30,13 @@ const tabs = [
 ]
 
 const elId = 'milk-tea_bottom-bar'
-export default function NavBar() {
+export default function NavBar(props: { onRect?: (rect: Taro.NodesRef.BoundingClientRectCallbackResult) => void }) {
   const bottomRect = useElementRect(elId)
+
+  useEffect(() => {
+    props.onRect?.(bottomRect)
+  }, [bottomRect, props, props.onRect])
+
   const { bottom } = useSafeArea()
   const pathname = useRouter().path
 
