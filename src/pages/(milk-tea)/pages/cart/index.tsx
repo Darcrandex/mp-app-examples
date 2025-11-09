@@ -5,6 +5,7 @@ import GoodListItem from '@/pages/(milk-tea)/components/GoodListItem'
 import NavBar from '@/pages/(milk-tea)/components/NavBar'
 import { useCartStatus } from '@/pages/(milk-tea)/stores/cart'
 import { cls } from '@/utils/cls'
+import { Empty } from '@taroify/core'
 import { useState } from 'react'
 
 export default function Cart() {
@@ -14,13 +15,14 @@ export default function Cart() {
 
   return (
     <>
-      <section className='min-h-screen bg-gray-100'>
+      <section className='min-h-screen bg-slate-100'>
         <div className='bg-white' style={{ height: top + btnHeight + 2 * btnSpacing }}></div>
 
         {list.length === 0 ? (
-          <div className='mt-32 flex items-center justify-center'>
-            <p className='text-sm text-gray-500'>暂无商品</p>
-          </div>
+          <Empty>
+            <Empty.Image />
+            <Empty.Description>没有商品哦</Empty.Description>
+          </Empty>
         ) : (
           <ol className='ui-shadow m-6 flex flex-col gap-4 rounded-md bg-white p-4'>
             {list.map((v) => (

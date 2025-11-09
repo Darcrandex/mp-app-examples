@@ -18,7 +18,7 @@ export default function CartWidget(props: {
     props.onRect?.(rect)
   }, [props, rect])
 
-  const { list, totalPrice, setList } = useCartStatus()
+  const { totalPrice, setList } = useCartStatus()
   const pathname = useRouter().path
   const onNavigate = () => {
     if (pathname !== '/pages/(milk-tea)/pages/cart/index') {
@@ -28,13 +28,13 @@ export default function CartWidget(props: {
 
   const onPay = async () => {
     if (totalPrice === 0) {
-      Taro.showToast({ title: '还没有选择商品哦', duration: 1000 })
+      Taro.showToast({ title: '还没有选择商品哦', duration: 1000, icon: 'none' })
       return
     }
 
     console.log('ok')
     setList([])
-    Taro.showToast({ title: '下单成功', duration: 1000 })
+    Taro.showToast({ title: '下单成功', duration: 1000, icon: 'none' })
     await delay(1000)
     Taro.navigateTo({ url: '/pages/(milk-tea)/pages/orders/index' })
   }
@@ -43,11 +43,7 @@ export default function CartWidget(props: {
     <>
       <div
         id={elId}
-        className={cls(
-          'fixed right-0 left-0 flex items-center gap-2 bg-white px-6 py-4',
-          props.className,
-          list.length === 0 && 'invisible opacity-0',
-        )}
+        className={cls('fixed right-0 left-0 flex items-center gap-2 bg-white px-6 py-4', props.className)}
         style={props.style}
         onClick={onNavigate}
       >

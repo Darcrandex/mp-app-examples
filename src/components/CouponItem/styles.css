@@ -1,0 +1,37 @@
+.milk-tea_coupon-item {
+  position: relative;
+  background: linear-gradient(60deg, #faedd7 0%, #fbbf24 100%);
+  border-radius: 8rpx;
+  padding: 0 8rpx;
+}
+
+.milk-tea_coupon-item::after,
+.milk-tea_coupon-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.milk-tea_coupon-item::before {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.milk-tea_coupon-item::after {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.milk-tea_coupon-item_text {
+  font-size: 24rpx;
+  padding: 2rpx 8rpx;
+}
+
+.milk-tea_coupon-item_line {
+  height: 100%;
+  border-left: 1px dashed #fca818;
+}
